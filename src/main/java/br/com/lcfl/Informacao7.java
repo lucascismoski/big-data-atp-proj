@@ -21,7 +21,13 @@ public class Informacao7 {
             String[] campos = linha.split(";");
             if (campos.length == 10){
                 String mercadoria = campos[3];
-                float peso = Float.valueOf(campos[6]);
+
+                float peso;
+                try {
+                    peso = Float.valueOf(campos[6]);
+                } catch (Exception e) {
+                    peso = 0;
+                }
 
                 Text chaveMap = new Text(mercadoria);
                 FloatWritable valorMap = new FloatWritable(peso);

@@ -20,7 +20,13 @@ public class Informacao8 {
             String[] campos = linha.split(";");
             if (campos.length == 10){
                 String mercadoriaConcatenadaComAno = campos[3]+'_'+campos[1];
-                float peso = Float.valueOf(campos[6]);
+
+                float peso;
+                try {
+                    peso = Float.valueOf(campos[6]);
+                } catch (Exception e) {
+                    peso = 0;
+                }
 
                 Text chaveMap = new Text(mercadoriaConcatenadaComAno);
                 FloatWritable valorMap = new FloatWritable(peso);

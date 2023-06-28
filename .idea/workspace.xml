@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44692837-057b-48f3-a62a-32eb511bd229" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/lcfl/Implementacao1.java" afterDir="false" />
+    <list default="true" id="44692837-057b-48f3-a62a-32eb511bd229" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/lcfl/Informacao2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/lcfl/Informacao3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/lcfl/Informacao4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/lcfl/Informacao5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/lcfl/Informacao6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/lcfl/Informacao7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/lcfl/Informacao8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/lcfl/Implementacao1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/lcfl/Informacao1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,15 +54,20 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/lucas/OneDrive/Documentos/dev/BigData/big-data-atp-proj",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "advanced.settings"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Implementacao1">
-    <configuration name="Implementacao1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.lcfl.Implementacao1" />
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.lcfl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Teste">
+    <configuration name="Informacao1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.lcfl.Informacao1" />
       <module name="BigDataATPProj" />
       <extension name="coverage">
         <pattern>
@@ -85,22 +92,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
+    <configuration name="Teste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.lcfl.Teste" />
       <module name="BigDataATPProj" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="BigDataATPProj" />
-      <option name="filePath" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.lcfl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Implementacao1" />
+        <item itemvalue="Application.Teste" />
+        <item itemvalue="Application.Informacao1" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -114,7 +122,19 @@
       <option name="presentableId" value="Default" />
       <updated>1687907242639</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1687951303583</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687951303583</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2,6 +2,7 @@ package br.com.lcfl;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -12,32 +13,32 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 import java.io.IOException;
 
-public class Implementacao1 {
-    public static class MapperImplementacao1 extends Mapper<Object, Text, Text, IntWritable> {
+public class Informacao7 {
+    public static class MapperInformacao7 extends Mapper<Object, Text, Text, FloatWritable> {
         @Override
         public void map(Object chave, Text valor, Context context) throws IOException, InterruptedException {
             String linha = valor.toString();
             String[] campos = linha.split(";");
             if (campos.length == 10){
-                String pais = campos[0];
-                int ocorrencia = 1;
+                String mercadoria = campos[3];
+                float peso = Float.valueOf(campos[6]);
 
-                Text chaveMap = new Text(pais);
-                IntWritable valorMap = new IntWritable(ocorrencia);
+                Text chaveMap = new Text(mercadoria);
+                FloatWritable valorMap = new FloatWritable(peso);
 
                 context.write(chaveMap, valorMap);
             }
         }
     }
 
-    public static class ReducerImplementacao1 extends Reducer<Text, IntWritable, Text, IntWritable> {
+    public static class ReducerInformacao7 extends Reducer<Text, FloatWritable, Text, FloatWritable> {
         @Override
-        public void reduce(Text chave, Iterable<IntWritable> valores, Context context) throws IOException, InterruptedException {
-            int soma = 0;
-            for(IntWritable val : valores){
+        public void reduce(Text chave, Iterable<FloatWritable> valores, Context context) throws IOException, InterruptedException {
+            float soma = 0;
+            for(FloatWritable val : valores){
                 soma += val.get();
             }
-            IntWritable valorSaida = new IntWritable(soma);
+            FloatWritable valorSaida = new FloatWritable(soma);
             context.write(chave, valorSaida);
         }
     }
@@ -47,19 +48,19 @@ public class Implementacao1 {
         String arquivoEntrada = "C:\\Users\\lucas\\OneDrive\\Documentos\\dev\\BigData\\base_inteira.csv";
         String arquivoSaida = "C:\\Users\\lucas\\OneDrive\\Documentos\\dev\\BigData\\BigDataResults\\implementacao1";
 
-//        if(args.length == 2){
-//            arquivoEntrada = args[0];
-//            arquivoSaida = args[1];
-//        }
+        if(args.length == 2){
+            arquivoEntrada = args[0];
+            arquivoSaida = args[1];
+        }
 
         Configuration conf = new Configuration();
-        Job job = Job.getInstance(conf, "atividade1");
+        Job job = Job.getInstance(conf, "informacao7");
 
-        job.setJarByClass(Implementacao1.class);
-        job.setMapperClass(MapperImplementacao1.class);
-        job.setReducerClass(ReducerImplementacao1.class);
+        job.setJarByClass(Informacao7.class);
+        job.setMapperClass(MapperInformacao7.class);
+        job.setReducerClass(ReducerInformacao7.class);
         job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(IntWritable.class);
+        job.setOutputValueClass(FloatWritable.class);
 
         FileInputFormat.addInputPath(job, new Path(arquivoEntrada));
         FileOutputFormat.setOutputPath(job, new Path(arquivoSaida));
